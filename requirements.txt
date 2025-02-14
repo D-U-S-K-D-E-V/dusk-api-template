@@ -1,0 +1,6 @@
+fastapi[standard]
+pytest
+uvicorn[standard] 
+gunicorn
+debugpy
+requests
