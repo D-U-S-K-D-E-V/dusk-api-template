@@ -3,6 +3,7 @@ RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
 ARG APP_PORT=8000
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
+ENV PYTHONPATH=app
 ENV APP_PORT = ${APP_PORT}
 COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
