@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
+from .routes.example import routes_example
 app = FastAPI()
 
 origins = [
@@ -18,7 +18,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(mail_api.router)
+app.include_router(routes_example.router)
 
 @app.get("/")
 async def root():
